@@ -8,4 +8,3 @@ def test_mock_create_file(mocker):
     mock_mode = 'x'
     fs.create_file()
     mock_open_fn.assert_called_once_with(mock_file_path, mock_mode)
-    

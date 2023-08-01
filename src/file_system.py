@@ -6,7 +6,3 @@ class FileSystem:
     def create_file(self): 
         self.file = open(self.file_name, 'x')
         self.file.close()
-        
-    
-    
-
