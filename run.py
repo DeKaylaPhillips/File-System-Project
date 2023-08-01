@@ -1,6 +1,6 @@
-from src.file_system import File_System 
+from src.file_system import FileSystem 
 
-fs = File_System('myFile.csv')
+fs = FileSystem('myFile.csv')
 fs.create_file()
 
 

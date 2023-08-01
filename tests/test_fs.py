@@ -1,7 +1,7 @@
-from src.file_system import File_System
+from src.file_system import FileSystem
 
 mock_file_path = 'mockFile.csv'
-fs = File_System(mock_file_path)
+fs = FileSystem(mock_file_path)
 
 def test_mock_create_file(mocker):
     mock_open_fn = mocker.patch('builtins.open', mocker.mock_open())

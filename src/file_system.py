@@ -1,4 +1,4 @@
-class File_System:
+class FileSystem:
     def __init__(self, file_descriptor):
         self.file_name = file_descriptor
         self.file = None
