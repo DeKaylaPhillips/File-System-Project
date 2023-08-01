@@ -4,5 +4,6 @@ class FileSystem:
         self.file = None
     
     def create_file(self): 
-        self.file = open(self.file_name, 'x')
-        self.file.close()
+        with open(self.file_name, 'w') as self.file:
+            new_file = self.file.name
+        print(new_file)
