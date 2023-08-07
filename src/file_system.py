@@ -1,4 +1,3 @@
-from src.validator import Validator
 class FileSystem: 
     def __init__(self, file_descriptor, Validator, Formatter):
         self.file_name = file_descriptor
