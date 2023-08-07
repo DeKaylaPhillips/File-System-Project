@@ -15,10 +15,11 @@ def test_system_will_create_new_files_with_headers(mocker):
     mock_file = mock_open_fn.return_value
     mock_print_fn = mock_print(mocker)
     mock_mode = 'w'
+    headers = fs.format.get_csv_formatted_headers(mock_headers_list)
     fs.create_file(mock_headers_list)
     mock_open_fn.assert_called_once_with(mock_file_path, mock_mode)
     mock_print_fn.assert_called_once_with(mock_file.name)
-    mock_file.write.assert_called_once()
+    mock_file.write.assert_called_once_with(headers)
 
 def test_system_will_read_data_from_a_file(mocker):
     mock_open_fn = mock_open(mocker)
